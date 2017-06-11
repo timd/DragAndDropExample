@@ -1,26 +1,112 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DragAndDrop" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ill-oN-xzb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="768"/>
+                                <subviews>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kath_square" translatesAutoresizingMaskIntoConstraints="NO" id="yBE-8C-4W9">
+                                        <rect key="frame" x="70" y="618" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="8hm-9r-5Sk"/>
+                                            <constraint firstAttribute="width" secondItem="yBE-8C-4W9" secondAttribute="height" multiplier="1:1" id="add-Hg-5s6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="panda_200x200" translatesAutoresizingMaskIntoConstraints="NO" id="cHy-at-5VC">
+                                        <rect key="frame" x="70" y="50" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="cHy-at-5VC" secondAttribute="height" multiplier="1:1" id="A2J-NX-5LB"/>
+                                            <constraint firstAttribute="width" constant="100" id="fzc-a5-ZmS"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yBE-8C-4W9" firstAttribute="centerX" secondItem="Ill-oN-xzb" secondAttribute="centerX" id="1kG-sG-aTp"/>
+                                    <constraint firstItem="cHy-at-5VC" firstAttribute="centerX" secondItem="Ill-oN-xzb" secondAttribute="centerX" id="IcG-Ie-HwO"/>
+                                    <constraint firstAttribute="bottom" secondItem="yBE-8C-4W9" secondAttribute="bottom" constant="50" id="PxK-b1-i0b"/>
+                                    <constraint firstItem="cHy-at-5VC" firstAttribute="top" secondItem="Ill-oN-xzb" secondAttribute="top" constant="50" id="tgK-dw-3ua"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-Hn-kgN" userLabel="Right hand side">
+                                <rect key="frame" x="784" y="0.0" width="240" height="768"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="09y-MD-5jX" userLabel="Drop container view">
+                                        <rect key="frame" x="70" y="334" width="100" height="100"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="joV-aR-eJh">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="cfo-j2-fId"/>
+                                                    <constraint firstAttribute="width" secondItem="joV-aR-eJh" secondAttribute="height" multiplier="1:1" id="kUg-KB-6kY"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="97Q-Q4-gga"/>
+                                            <constraint firstItem="joV-aR-eJh" firstAttribute="centerY" secondItem="09y-MD-5jX" secondAttribute="centerY" id="GcJ-fa-wrX"/>
+                                            <constraint firstAttribute="width" secondItem="09y-MD-5jX" secondAttribute="height" multiplier="1:1" id="fZg-B0-ycb"/>
+                                            <constraint firstItem="joV-aR-eJh" firstAttribute="centerX" secondItem="09y-MD-5jX" secondAttribute="centerX" id="mGv-lB-rqe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="09y-MD-5jX" firstAttribute="centerY" secondItem="RYq-Hn-kgN" secondAttribute="centerY" id="2Mt-uS-sdD"/>
+                                    <constraint firstItem="09y-MD-5jX" firstAttribute="centerX" secondItem="RYq-Hn-kgN" secondAttribute="centerX" id="5JH-1g-A6c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RYq-Hn-kgN" secondAttribute="trailing" id="3nJ-7I-Wrx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RYq-Hn-kgN" secondAttribute="bottom" id="Ghf-OI-g7B"/>
+                            <constraint firstItem="RYq-Hn-kgN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="784" id="HZZ-Xf-akb"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ill-oN-xzb" secondAttribute="bottom" id="JWL-TA-fuc"/>
+                            <constraint firstItem="Ill-oN-xzb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MK7-1p-pHz"/>
+                            <constraint firstItem="Ill-oN-xzb" firstAttribute="width" secondItem="RYq-Hn-kgN" secondAttribute="width" id="UzO-Oo-oIW"/>
+                            <constraint firstItem="Ill-oN-xzb" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="YIK-OS-6Qp"/>
+                            <constraint firstItem="RYq-Hn-kgN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="Yyd-XZ-VeY"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1024" height="768"/>
+                    <connections>
+                        <outlet property="droppableView" destination="09y-MD-5jX" id="sBA-v5-YFm"/>
+                        <outlet property="firstDraggableView" destination="cHy-at-5VC" id="gkT-mr-kRy"/>
+                        <outlet property="imageDropView" destination="joV-aR-eJh" id="w1L-MT-uWl"/>
+                        <outlet property="mainView" destination="Ill-oN-xzb" id="UTw-e7-L6B"/>
+                        <outlet property="secondDraggableView" destination="yBE-8C-4W9" id="VoK-dG-Ufk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-70" y="86"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kath_square" width="869" height="869"/>
+        <image name="panda_200x200" width="200" height="200"/>
+    </resources>
 </document>
