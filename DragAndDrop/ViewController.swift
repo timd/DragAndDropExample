@@ -30,7 +30,6 @@ class ViewController: UIViewController {
         let dropInteraction = UIDropInteraction(delegate: self)
         droppableView.addInteraction(dropInteraction)
         
-        
     }
 
     override func didReceiveMemoryWarning() {
